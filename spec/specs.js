@@ -4,6 +4,10 @@ describe('Pizza', function() {
     expect(testPizza.pizzaSize).to.equal("large");
     expect(testPizza.topping).to.equal("pepperoni");
   });
+  it('should create a base price for the pizza', function(){
+    var testPizza = new Pizza();
+    expect(testPizza.basePrice).to.equal(10);
+  });
 });
 //   it('should return a full name', function() {
 //     var testContact = new Contact("Paul", "Hess");
