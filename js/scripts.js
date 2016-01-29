@@ -2,16 +2,10 @@ function Pizza(pizzaSize, topping) {
   this.pizzaSize = pizzaSize;
   this.topping = topping;
 }
+
 //
-// function Address(street, city, state) {
-//   this.street = street;
-//   this.city = city;
-//   this.state = state;
-// }
-//
-// Contact.prototype.fullName = function() {
-//   return this.firstName + " " + this.lastName;
-// }
+Pizza.prototype.basePrice = 10;
+
 // Address.prototype.fullAddress = function() {
 //   return this.street + ", " + this.city + ", " + this.state;
 // }
