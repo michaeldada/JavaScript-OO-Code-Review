@@ -7,39 +7,31 @@
     </script>
     <script type="text/javascript" src="js/scripts.js">
     </script>
-    <title>Contact List</title>
+    <title>Order Pizza</title>
   </head>
   <body>
     <div class="container">
-      <h1>Contact List</h1>
-      <form id="contact" action="index.html" method="post">
+      <h1>Order Pizza</h1>
+      <form id="orderForm" action="index.html" method="post">
         <div class="form-group">
-          <label for="firstName">First name</label>
-          <input id="firstName" type="text" name="name" value="">
+          <label for="size">Select Size</label>
+          <select id="size">
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
         </div>
         <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input id="lastName" type="text" name="name" value="">
+          <label for="toppings">Choose Toppings</label>
+          <input type="checkbox" name="pepperoni" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="sausage" value="sausage">Sausage<br>
+          <input type="checkbox" name="bacon" value="bacon">Bacon<br>
+          <input type="checkbox" name="artichokes" value="artichokes">Artichokes<br>
+          <input type="checkbox" name="anchovies" value="anchovies">Anchovies<br>
+          <input type="checkbox" name="goat cheese" value="cheese">Goat Cheese<br>
         </div>
-        <div class="newAddress" id="originalAddress">
-          <div class="form-group">
-            <label for="street">Street Address</label>
-            <input class="street" type="text" name="name" value="">
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input class="city" type="text" name="name" value="">
-          </div>
-          <div class="form-group">
-            <label for="state">State</label>
-            <input class="state" type="text" name="name" value="">
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <label for="addAddress">Add an additional address</label>
-        <button type="button"class= "btn btn-primary" id="addAddress" name="button">Add</button>
+        <button type="submit" class="btn btn-primary">Calculate Price!</button>
       </form>
-      <div class="nameListHidden">
+      <!-- <div class="nameListHidden">
         <h3>Names</h3>
         <ul id="nameList">
 
@@ -50,11 +42,10 @@
         <ul id="contactLast">
           <li id="nameOutput"></li>
           <li class="addressOutput"></li>
-          <!-- <li id="cityOutput"></li>
+          <! <li id="cityOutput"></li>
           <li id="stateOutput"></li> -->
-        </ul>
+        <!-- </ul> -->
       </div>
-    </div>
 
   </body>
 </html>

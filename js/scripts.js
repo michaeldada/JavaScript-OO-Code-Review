@@ -1,11 +1,7 @@
 function Pizza(pizzaSize, toppings) {
   this.pizzaSize = pizzaSize;
   this.toppings = toppings;
-
 }
-//this.toppings = ["pepperoni", "sausage", "pineapple"];
-
-//Pizza.prototype.basePrice = 10;
 
 Pizza.prototype.toppingsPrice = function(){
 
@@ -35,29 +31,12 @@ Pizza.prototype.finalPrice = function(){
 return this.sizePrice(this.pizzaSize) + this.toppingsPrice(this.toppings) + 8;
 };
 
-// };
-//console.log(this.toppings.length);
-// Address.prototype.fullAddress = function() {
-//   return this.street + ", " + this.city + ", " + this.state;
-// }
-//
-// $(document).ready(function() {
-//   $("#addAddress").click(function() {
-//       $("#originalAddress").append('<div class="newAddress">' +
-//                                    '<div class="form-group">' +
-//                                      '<label for="street">Street</label>' +
-//                                      '<input type="text" class="street">' +
-//                                    '</div>' +
-//                                    '<div class="form-group">' +
-//                                      '<label for="city">City</label>' +
-//                                      '<input type="text" class="city">' +
-//                                    '</div>' +
-//                                    '<div class="form-group">' +
-//                                      '<label for="state">State</label>' +
-//                                      '<input type="text" class="state">' +
-//                                    '</div>' +
-//                                  '</div>');
-// });
+$(document).ready(function() {
+  $("#orderForm").submit(function(event) {
+      var size = $("select#size").val();
+      var toppings = $("input:checkbox:checked.toppings").map(function(){
+        return this.value;
+      }).get();
 //   $('form#contact').submit(function(event) {
 //     event.preventDefault();
 //     var firstNameInput = $('input#firstName').val();
