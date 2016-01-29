@@ -17,9 +17,9 @@ describe('Pizza', function() {
   });
   it('should calculate final price based on size and toppings', function(){
     var testPizza = new Pizza();
-    testPizza.toppings = ["pepperoni", "sausage", "pineapple"];
-    testPizza.pizzaSize = "large";
-    expect(testPizza.finalPrice()).to.equal(19)
+    testPizza.toppings = ["pepperoni", "sausage"];
+    testPizza.pizzaSize = "medium";
+    expect(testPizza.finalPrice()).to.equal(15);
   });
 });
 //   it('should return a full name', function() {
