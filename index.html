@@ -11,7 +11,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Order Pizza</h1>
+      <h2>Mikey's Pizza Palace</h2>
+      <h3>Welcome! Place your order below.  Our pizzas start at $13 for a medium and $15 for a large.  Every topping is an additional $2.  Enjoy!</h3>
       <form id="orderForm" action="index.html" method="post">
         <div class="form-group">
           <label for="size">Select Size</label>
@@ -22,15 +23,19 @@
         </div>
         <div class="form-group">
           <label for="toppings">Choose Toppings</label>
-          <input type="checkbox" name="pepperoni" value="pepperoni">Pepperoni<br>
-          <input type="checkbox" name="sausage" value="sausage">Sausage<br>
-          <input type="checkbox" name="bacon" value="bacon">Bacon<br>
-          <input type="checkbox" name="artichokes" value="artichokes">Artichokes<br>
-          <input type="checkbox" name="anchovies" value="anchovies">Anchovies<br>
-          <input type="checkbox" name="goat cheese" value="cheese">Goat Cheese<br>
+          <input type="checkbox" class="toppings" name="pepperoni" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" class="toppings" name="sausage" value="sausage">Sausage<br>
+          <input type="checkbox" class="toppings" name="bacon" value="bacon">Bacon<br>
+          <input type="checkbox" class="toppings" name="artichokes" value="artichokes">Artichokes<br>
+          <input type="checkbox" class="toppings" name="anchovies" value="anchovies">Anchovies<br>
+          <input type="checkbox" class="toppings" name="goat cheese" value="cheese">Goat Cheese<br>
         </div>
         <button type="submit" class="btn btn-primary">Calculate Price!</button>
       </form>
+      <h1>The total will be:</h1>
+      <div class="displayPrice">
+
+      </div>
       <!-- <div class="nameListHidden">
         <h3>Names</h3>
         <ul id="nameList">

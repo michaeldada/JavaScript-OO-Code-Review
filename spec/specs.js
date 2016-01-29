@@ -5,20 +5,20 @@ describe('Pizza', function() {
     expect(testPizza.toppings).to.equal("pepperoni");
   });
   it('should calculate the price for a large or medium pizza', function(){
-    var testPizza = new Pizza("large",[]);
-    //testPizza.pizzaSize = "medium"
-    //testPizza.toppings = []
-    expect(testPizza.sizePrice()).to.equal(7);
+    var testPizza = new Pizza();
+    testPizza.pizzaSize = "medium"
+    testPizza.toppings = []
+    expect(testPizza.sizePrice()).to.equal(5);
   });
   it('should calculate the price for toppings', function(){
     var testPizza = new Pizza();
     testPizza.toppings = ["pepperoni", "sausage", "pineapple"];
-    expect(testPizza.toppingsPrice()).to.equal(4);
+    expect(testPizza.toppingsPrice()).to.equal(6);
   });
   it('should calculate final price based on size and toppings', function(){
     var testPizza = new Pizza();
     testPizza.toppings = ["pepperoni", "sausage"];
-    testPizza.pizzaSize = "medium";
-    expect(testPizza.finalPrice()).to.equal(15);
+    testPizza.pizzaSize = "large";
+    expect(testPizza.finalPrice()).to.equal(19);
   });
 });
