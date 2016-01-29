@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.12.0.js">
+    </script>
+    <script type="text/javascript" src="js/scripts.js">
+    </script>
+    <title>Contact List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact List</h1>
+      <form id="contact" action="index.html" method="post">
+        <div class="form-group">
+          <label for="firstName">First name</label>
+          <input id="firstName" type="text" name="name" value="">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" type="text" name="name" value="">
+        </div>
+        <div class="newAddress" id="originalAddress">
+          <div class="form-group">
+            <label for="street">Street Address</label>
+            <input class="street" type="text" name="name" value="">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input class="city" type="text" name="name" value="">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input class="state" type="text" name="name" value="">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <label for="addAddress">Add an additional address</label>
+        <button type="button"class= "btn btn-primary" id="addAddress" name="button">Add</button>
+      </form>
+      <div class="nameListHidden">
+        <h3>Names</h3>
+        <ul id="nameList">
+
+        </ul>
+      </div>
+      <div class="contactLastHidden">
+        <h3>Full Contact Info:</h3>
+        <ul id="contactLast">
+          <li id="nameOutput"></li>
+          <li class="addressOutput"></li>
+          <!-- <li id="cityOutput"></li>
+          <li id="stateOutput"></li> -->
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
