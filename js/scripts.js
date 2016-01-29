@@ -2,10 +2,18 @@ function Pizza(pizzaSize, toppings) {
   this.pizzaSize = pizzaSize;
   this.toppings = toppings;
 }
+  this.toppings = ["pepperoni", "sausage", "pineapple"];
 
-//
 Pizza.prototype.basePrice = 10;
 
+Pizza.prototype.newPrice = function(){
+var numberOfToppings = this.toppings.length;
+ var additionalToppings = (numberOfToppings - 1)
+ var additionalToppingsPrice = additionalToppings * 2
+ var totalPrice = additionalToppingsPrice + this.basePrice
+return totalPrice;
+};
+console.log(this.toppings.length);
 // Address.prototype.fullAddress = function() {
 //   return this.street + ", " + this.city + ", " + this.state;
 // }
