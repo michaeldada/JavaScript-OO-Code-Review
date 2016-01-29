@@ -1,6 +1,6 @@
-function Pizza(pizzaSize, topping) {
+function Pizza(pizzaSize, toppings) {
   this.pizzaSize = pizzaSize;
-  this.topping = topping;
+  this.toppings = toppings;
 }
 
 //
