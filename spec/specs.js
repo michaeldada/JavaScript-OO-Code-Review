@@ -2,7 +2,7 @@ describe('Pizza', function() {
   it('should create a pizza object', function() {
     var testPizza = new Pizza("large", "pepperoni");
     expect(testPizza.pizzaSize).to.equal("large");
-    expect(testContact.topping).to.equal("pepperoni");
+    expect(testPizza.topping).to.equal("pepperoni");
   });
 });
 //   it('should return a full name', function() {
