@@ -15,6 +15,12 @@ describe('Pizza', function() {
     testPizza.toppings = ["pepperoni", "sausage", "pineapple"];
     expect(testPizza.toppingsPrice()).to.equal(4);
   });
+  it('should calculate final price based on size and toppings', function(){
+    var testPizza = new Pizza();
+    testPizza.toppings = ["pepperoni", "sausage", "pineapple"];
+    testPizza.pizzaSize = "large";
+    expect(testPizza.finalPrice()).to.equal(19)
+  });
 });
 //   it('should return a full name', function() {
 //     var testContact = new Contact("Paul", "Hess");
