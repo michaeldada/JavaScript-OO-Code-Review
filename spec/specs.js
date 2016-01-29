@@ -4,14 +4,16 @@ describe('Pizza', function() {
     expect(testPizza.pizzaSize).to.equal("large");
     expect(testPizza.toppings).to.equal("pepperoni");
   });
-  it('should create a base price for the pizza', function(){
-    var testPizza = new Pizza();
-    expect(testPizza.basePrice).to.equal(10);
+  it('should calculate the price for a large or medium pizza', function(){
+    var testPizza = new Pizza("large",[]);
+    //testPizza.pizzaSize = "medium"
+    //testPizza.toppings = []
+    expect(testPizza.sizePrice()).to.equal(7);
   });
-  it('should add 2 to the base price for each additional topping', function(){
+  it('should calculate the price for toppings', function(){
     var testPizza = new Pizza();
     testPizza.toppings = ["pepperoni", "sausage", "pineapple"];
-    expect(testPizza.newPrice()).to.equal(14);
+    expect(testPizza.toppingsPrice()).to.equal(4);
   });
 });
 //   it('should return a full name', function() {
